@@ -21,3 +21,6 @@ def scrape_url(payload: ScrapeRequest):
         return {"error": f"Request failed: {str(e)}"}
     except Exception as e:
         return {"error": f"Scraping failed: {str(e)}"}
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
