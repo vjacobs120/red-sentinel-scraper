@@ -1,0 +1,35 @@
+# Red Sentinel Configuration
+version: 1.0
+
+# Scraper Settings
+scraper:
+  timeout: 30
+  max_retries: 3
+  user_agent: "Red Sentinel Bot 1.0"
+
+# Red Team Settings
+redteam:
+  enabled: true
+  log_level: INFO
+  
+# Attack Vectors
+attack_vectors:
+  prompt_injection:
+    enabled: true
+    max_attempts: 5
+  jailbreak:
+    enabled: true
+    detection_threshold: 0.8
+  multilingual:
+    enabled: true
+    languages: ["en", "fr", "es"]
+
+# Defense Settings
+defense:
+  guards:
+    input_validation: true
+    content_filtering: true
+  monitoring:
+    log_attacks: true
+    alert_threshold: "high"
+
